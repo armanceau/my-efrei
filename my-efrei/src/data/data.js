@@ -1,7 +1,8 @@
 export let classes = [
     {
-        "id": 1,
+        "id": 0,
         "nom": "B3",
+        "image": "./asset/img/eleves/Taïs.jpg",
         //my-efrei/eleve/1
         "eleves": [
             {
@@ -107,13 +108,14 @@ export let classes = [
         ]
     },
     {
-        "id": 2,
+        "id": 1,
         "nom": "M1",
+        "image": "./asset/img/eleves/Taïs.jpg",
         //my-efrei/eleve/1
         "eleves": [
             {
                 "id": 1,
-                "nom": "Manceau",
+                "nom": "Toto",
                 "prenom": "Arthur",
                 "image": "./asset/img/eleves/Taïs.jpg",
                 "age": 21,

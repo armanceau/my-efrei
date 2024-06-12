@@ -1,10 +1,9 @@
 import { FicheClasse } from "./classe/FicheClasse";
 
 
-export const ListeCLasse = ({classes}) => {
+export const ListeClasses = ({classes}) => {
     return (
         <div>
-           
             {classes.map((value, index) => {
                 return(
                     <div>
