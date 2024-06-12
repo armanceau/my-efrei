@@ -87,6 +87,18 @@ export let classes = [
                     1, 2, 3
                 ]
             },
+            {
+                "id": 2,
+                "nom": "Jack",
+                "prenom": "Jean",
+                "matière": "Anglais",
+                "classes": [
+                    1, 2
+                ]
+            },
+        ],
+        "matières": [
+            "React.js", "Anglais", "Docker", "Java"
         ]
     },
 ]
