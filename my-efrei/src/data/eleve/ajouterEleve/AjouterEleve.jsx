@@ -4,12 +4,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const AjouterEleve = ({liste, setGetListe}) => {
 
-    const [temp, setTemp] = useState({nom:"", prenom:"",age:"", image:"", matiere:"", note:""  })
+    const [temp, setTemp] = useState({nom:"", prenom:"",age:"", image:""  })
 
     const onSubmit = (e) => {
         e.preventDefault();
         setGetListe([...liste, temp]);
-        setTemp({ nom: "", prenom: "", age: "", image: "", matiere: "", note: "" });
+        setTemp({ nom: "", prenom: "", age: "", image: "" });
     };
 
 

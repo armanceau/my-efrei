@@ -13,8 +13,6 @@ export const ListeEleves = () => {
 
     const [getListe, setGetListe] = useState(classes[id].eleves)
 
-    console.log(getListe);
-
     return (
         <div>
             Classe : {classes[id].nom}

@@ -1,10 +1,15 @@
 import "./FicheEleve.css";
+import { useState } from 'react'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { AjouterNote } from "./ajouterNote/AjouterNote"
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
+
+    const [getNote, setGetNote] = useState(notes);
+
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
             <img src={image} alt={nom + " " + prenom} class="img-profil br-top-20" />
@@ -34,18 +39,19 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                         <div className="content">          
                             {' '}          
                             <p>
-                                {notes && notes.length > 0 ? (
+                                {getNote && getNote.length > 0 ? (
                                     <ul>
-                                        {notes.map((note, index) => (
+                                        {getNote.map((note, index) => (
                                             <li key={index}>{note.matiere}: {note.note}</li>
                                         ))}
                                     </ul>
                                 ) : (
                                     <i>
-                                        <span class="text-muted">Pas de notes disponibles.</span>
+                                        <span className="text-muted">Pas de notes disponibles.</span>
                                     </i>
                                 )}
                             </p>
+                            <AjouterNote liste={getNote} setGetNote={setGetNote} />
                             Age : {age}
                         </div>        
                     </div>    

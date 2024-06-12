@@ -18,11 +18,11 @@ export let classes = [
                     },
                     {
                         "matiere": "Anglais",
-                        "note": 16
+                        "note": 15
                     },
                     {
                         "matiere": "Docker",
-                        "note": 3
+                        "note": 14
                     },
                     {
                         "matiere": "Java",
