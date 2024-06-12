@@ -1,7 +1,7 @@
-export const FicheClasse = () => {
+export const FicheClasse = ({nom, image}) => {
     return(
         <div>
-            Fiche classe
+            {nom}
         </div>
     )
 }

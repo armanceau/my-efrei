@@ -1,10 +1,17 @@
 import { FicheClasse } from "./classe/FicheClasse";
 
 
-export const ListeCLasse = ({liste}) => {
+export const ListeCLasse = ({classes}) => {
     return (
         <div>
-            liste classe
+            {classes.map((value, index) => {
+                return(
+                    <div>
+                        <FicheClasse key={index} nom={value.nom} image={value.image} />
+                    </div>
+                )
+            })}
         </div>
+
     )
 }
