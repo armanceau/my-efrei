@@ -5,7 +5,7 @@ import {classes} from '../data';
 export const FicheClasse = ({nom, image, index}) => {
     return(
         <div>
-            <a href={`classe/${index}`}>
+            <a href={`classe/${index}`} test={index}>
                 {classes[index].nom}
                 <img src={image} alt={classes[index].nom} class="img-profil" />
             </a>

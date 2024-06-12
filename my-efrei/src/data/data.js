@@ -2,7 +2,7 @@ export let classes = [
     {
         "id": 0,
         "nom": "B3",
-        "image": "./asset/img/eleves/Taïs.jpg",
+        "image": "/asset/img/eleves/Taïs.jpg",
         //my-efrei/eleve/1
         "eleves": [
             {
@@ -117,7 +117,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Toto",
                 "prenom": "Arthur",
-                "image": "./asset/img/eleves/Taïs.jpg",
+                "image": "/asset/img/eleves/Taïs.jpg",
                 "age": 21,
                 "notes": [
                     {

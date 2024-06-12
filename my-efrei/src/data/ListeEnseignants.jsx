@@ -14,7 +14,7 @@ export const ListeEnseignants = () => {
             {classes[id].enseignants.map((value, index) => {  
                 return(
                     <div className="container-enseignant">
-                        <FicheEnseignant key={index} nom={value.nom} prenom={value.prenom} image={value.image}/>
+                        <FicheEnseignant key={index} nom={value.nom} prenom={value.prenom} matiere={value.matiere} image={value.image} age={value.age}/>
                     </div>
                 )
             })}

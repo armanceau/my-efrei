@@ -15,14 +15,13 @@ export const ListeEleves = () => {
             Liste élève :
             <br />
             <br />
-            {classes[id].eleves.map((value, index) => {  
-                console.log(value.image)
-                return(
-                    <div className="container-eleve">
-                        <FicheEleve key={index} nom={value.nom} prenom={value.prenom} image={value.image} index={index} classeID={id}/>
-                    </div>
-                )
-            })}
+            <div className="container-eleve d-flex">
+                {classes[id].eleves.map((value, index) => {  
+                    return(                        
+                        <FicheEleve key={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
+                    )
+                })}
+            </div>
             <hr />
         </div>
     )
