@@ -1,19 +1,21 @@
 import '../App.css'
 import { FicheEleve } from "./eleve/FicheEleve"
 
-export const ListeEleves = ({liste}) => {
+export const ListeEleves = ({classes}) => {
 
-    console.log(liste);
+    console.log(classes);
 
     return (
         <div className="container">
-            {liste.map((value, index) => {  
+            Liste élève :
+            {classes.map((value, index) => {  
                 return(
                     <div className="container-eleve">
                         <FicheEleve  key={index} nom={value.nom} prenom={value.prenom} image={value.image}/>
                     </div>
                 )
             })}
+            <hr />
         </div>
     )
 }
