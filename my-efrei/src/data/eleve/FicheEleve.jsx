@@ -29,7 +29,7 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
 
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
-            <img src={image} alt={nom + " " + prenom} class="img-profil br-top-20" />
+            <img src={getImage} alt={getNom + " " + getPrenom} class="img-profil br-top-20" />
             <div class="info">
                 <p>{getNom} {getPrenom}</p>
             </div>
