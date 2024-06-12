@@ -19,7 +19,7 @@ export const ListeEleves = () => {
                 console.log(value.image)
                 return(
                     <div className="container-eleve">
-                        <FicheEleve key={index} nom={value.nom} prenom={value.prenom} image={value.image}/>
+                        <FicheEleve key={index} nom={value.nom} prenom={value.prenom} image={value.image} index={index} classeID={id}/>
                     </div>
                 )
             })}

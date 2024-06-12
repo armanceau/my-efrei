@@ -9,7 +9,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Manceau",
                 "prenom": "Arthur",
-                "image": "./asset/img/eleves/Taïs.jpg",
+                "image": "/asset/img/eleves/Taïs.jpg",
                 "age": 21,
                 "notes": [
                     {
@@ -34,7 +34,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Mousset",
                 "prenom": "Mathias",
-                "image": "./asset/img/eleves/Thomas.jpg",
+                "image": "/asset/img/eleves/Thomas.jpg",
                 "age": 19,
                 "notes": [
                     {
@@ -59,7 +59,7 @@ export let classes = [
                 "id": 3,
                 "nom": "Pierre",
                 "prenom": "Paul",
-                "image": "./asset/img/eleves/Lucie.jpg",
+                "image": "/asset/img/eleves/Lucie.jpg",
                 "age": 20,
                 "notes": [
                     {
@@ -86,7 +86,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Bissor",
                 "prenom": "Melvin",
-                "image": "./asset/img/enseignants/Durand.jpg",
+                "image": "/asset/img/enseignants/Durand.jpg",
                 "matiere": "React.js",
                 "classes": [
                     1, 2, 3
@@ -96,7 +96,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Jack",
                 "prenom": "Jean",
-                "image": "./asset/img/enseignants/Jean.jpg",
+                "image": "/asset/img/enseignants/Jean.jpg",
                 "matiere": "Anglais",
                 "classes": [
                     1, 2
@@ -110,7 +110,7 @@ export let classes = [
     {
         "id": 1,
         "nom": "M1",
-        "image": "./asset/img/eleves/Taïs.jpg",
+        "image": "/asset/img/eleves/Taïs.jpg",
         //my-efrei/eleve/1
         "eleves": [
             {
@@ -142,7 +142,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Mousset",
                 "prenom": "Mathias",
-                "image": "./asset/img/eleves/Thomas.jpg",
+                "image": "/asset/img/eleves/Thomas.jpg",
                 "age": 19,
                 "notes": [
                     {
@@ -167,7 +167,7 @@ export let classes = [
                 "id": 3,
                 "nom": "Pierre",
                 "prenom": "Paul",
-                "image": "./asset/img/eleves/Lucie.jpg",
+                "image": "/asset/img/eleves/Lucie.jpg",
                 "age": 20,
                 "notes": [
                     {
@@ -194,7 +194,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Poipoi",
                 "prenom": "lutin",
-                "image": "./asset/img/enseignants/Jean.jpg",
+                "image": "/asset/img/enseignants/Jean.jpg",
                 "matiere": "React.js",
                 "classes": [
                     1, 2, 3
@@ -204,7 +204,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Pierre",
                 "prenom": "Rocher",
-                "image": "./asset/img/enseignants/Sophie.jpg",
+                "image": "/asset/img/enseignants/Sophie.jpg",
                 "matiere": "Anglais",
                 "classes": [
                     1, 2
