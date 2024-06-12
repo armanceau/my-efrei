@@ -3,27 +3,28 @@ export let classes = [
         "id": 1,
         "nom": "B3",
         //my-efrei/eleve/1
-        "élèves": [
+        "eleves": [
             {
                 "id": 1,
                 "nom": "Manceau",
                 "prenom": "Arthur",
+                "image": "./asset/img/Taïs.jpg",
                 "age": 21,
                 "notes": [
                     {
-                        "matière": "React.js",
+                        "matiere": "React.js",
                         "note": 18
                     },
                     {
-                        "matière": "Anglais",
+                        "matiere": "Anglais",
                         "note": 16
                     },
                     {
-                        "matière": "Docker",
+                        "matiere": "Docker",
                         "note": 3
                     },
                     {
-                        "matière": "Java",
+                        "matiere": "Java",
                         "note": 13
                     }
                 ]
@@ -32,22 +33,23 @@ export let classes = [
                 "id": 2,
                 "nom": "Mousset",
                 "prenom": "Mathias",
+                "image": "./asset/img/Thomas.jpg",
                 "age": 19,
                 "notes": [
                     {
-                        "matière": "React.js",
+                        "matiere": "React.js",
                         "note": 17
                     },
                     {
-                        "matière": "Anglais",
+                        "matiere": "Anglais",
                         "note": 12
                     },
                     {
-                        "matière": "Docker",
+                        "matiere": "Docker",
                         "note": 12
                     },
                     {
-                        "matière": "Java",
+                        "matiere": "Java",
                         "note": 14
                     }
                 ]
@@ -56,22 +58,23 @@ export let classes = [
                 "id": 3,
                 "nom": "Pierre",
                 "prenom": "Paul",
+                "image": "./asset/img/Lucie.jpg",
                 "age": 20,
                 "notes": [
                     {
-                        "matière": "React.js",
+                        "matiere": "React.js",
                         "note": 12
                     },
                     {
-                        "matière": "Anglais",
+                        "matiere": "Anglais",
                         "note": 15
                     },
                     {
-                        "matière": "Docker",
+                        "matiere": "Docker",
                         "note": 5
                     },
                     {
-                        "matière": "Java",
+                        "matiere": "Java",
                         "note": 17
                     }
                 ]
@@ -82,7 +85,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Bissor",
                 "prenom": "Melvin",
-                "matière": "React.js",
+                "matiere": "React.js",
                 "classes": [
                     1, 2, 3
                 ]
@@ -91,13 +94,13 @@ export let classes = [
                 "id": 2,
                 "nom": "Jack",
                 "prenom": "Jean",
-                "matière": "Anglais",
+                "matiere": "Anglais",
                 "classes": [
                     1, 2
                 ]
             },
         ],
-        "matières": [
+        "matieres": [
             "React.js", "Anglais", "Docker", "Java"
         ]
     },
