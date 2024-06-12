@@ -24,6 +24,7 @@ export const ListeEnseignants = () => {
                     )
                 })}
             </div>
+            <br />
             <AjouterEnseignant liste={getListe} setGetListe={setGetListe}/>
         </div>
     )

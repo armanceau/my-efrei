@@ -28,6 +28,7 @@ export const ListeEleves = () => {
                     )
                 })}
             </div>
+            <br />
             <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
             <hr />
         </div>
