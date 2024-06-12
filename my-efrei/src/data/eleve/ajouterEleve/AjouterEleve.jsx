@@ -1,4 +1,6 @@
 import { useState } from "react"
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const AjouterEleve = ({liste, setGetListe}) => {
 

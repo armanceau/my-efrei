@@ -1,9 +1,11 @@
 import '../App.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FicheEleve } from "./eleve/FicheEleve"
 import { useParams } from "react-router-dom"
 import {classes} from './data'
 import { AjouterEleve } from "./eleve/ajouterEleve/AjouterEleve"
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const ListeEleves = () => {
 
@@ -14,7 +16,7 @@ export const ListeEleves = () => {
     console.log(getListe);
 
     return (
-        <div className="container">
+        <div>
             Classe : {classes[id].nom}
             <br />
             <br />

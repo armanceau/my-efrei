@@ -2,6 +2,8 @@ import '../App.css'
 import { FicheEnseignant } from "./enseignant/FicheEnseignant"
 import { useParams } from "react-router-dom"
 import {classes} from './data';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 export const ListeEnseignants = () => {
@@ -9,7 +11,7 @@ export const ListeEnseignants = () => {
     const {id} = useParams()
 
     return (
-        <div className="container">
+        <div>
             Liste enseignant :
             {classes[id].enseignants.map((value, index) => {  
                 return(

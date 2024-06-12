@@ -1,6 +1,8 @@
 import "./FicheEleve.css";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
     console.log(notes)
