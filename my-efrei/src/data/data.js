@@ -8,7 +8,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Manceau",
                 "prenom": "Arthur",
-                "image": "./asset/img/Taïs.jpg",
+                "image": "./asset/img/eleves/Taïs.jpg",
                 "age": 21,
                 "notes": [
                     {
@@ -33,7 +33,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Mousset",
                 "prenom": "Mathias",
-                "image": "./asset/img/Thomas.jpg",
+                "image": "./asset/img/eleves/Thomas.jpg",
                 "age": 19,
                 "notes": [
                     {
@@ -58,7 +58,7 @@ export let classes = [
                 "id": 3,
                 "nom": "Pierre",
                 "prenom": "Paul",
-                "image": "./asset/img/Lucie.jpg",
+                "image": "./asset/img/eleves/Lucie.jpg",
                 "age": 20,
                 "notes": [
                     {

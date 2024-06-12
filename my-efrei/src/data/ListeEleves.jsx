@@ -1,5 +1,4 @@
 import '../App.css'
-import { useEffect, useState } from 'react'
 import { FicheEleve } from "./eleve/FicheEleve"
 
 export const ListeEleves = ({liste}) => {
