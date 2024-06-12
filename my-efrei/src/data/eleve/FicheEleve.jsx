@@ -5,11 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
-    console.log(notes)
-    //const resolvedImage = require(`${image}`).default;
-    //console.log(document.getElementById("test"))
     return(
-        
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
             <img src={image} alt={nom + " " + prenom} class="img-profil br-top-20" />
             <div class="info">
@@ -45,15 +41,12 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                                         ))}
                                     </ul>
                                 ) : (
-                                    <span>Pas de notes disponibles</span>
+                                    <i>
+                                        <span class="text-muted">Pas de notes disponibles.</span>
+                                    </i>
                                 )}
                             </p>
-                            <br />
                             Age : {age}
-                            <br />
-                            <i>
-                                fgezuyfez
-                            </i>
                         </div>        
                     </div>    
                 )}  
