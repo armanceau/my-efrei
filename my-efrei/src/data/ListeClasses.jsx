@@ -1,4 +1,6 @@
 import { FicheClasse } from "./classe/FicheClasse";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 export const ListeClasses = ({classes}) => {

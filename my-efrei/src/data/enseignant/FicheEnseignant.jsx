@@ -1,6 +1,8 @@
 import "./FicheEnseignant.css"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const FicheEnseignant = ({nom, prenom, image, matiere, classes, age}) => {
     return(

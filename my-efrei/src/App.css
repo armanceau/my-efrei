@@ -37,6 +37,60 @@
   }
 }
 
-.d-flex{
-  display: flex;
+@font-face{
+  font-family: 'CabinSketch';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/CabinSketch-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Fredoka-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Poppins/Poppins-Regular.ttf');
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  font-family: 'Poppins' !important;
+}
+
+.popup > .header{
+  margin-top: -30px;
+}
+
+.br-20{
+  border-radius: 20px !important;
+}
+
+.br-top-20{
+  border-radius: 20px 20px 0px 0px !important;
+}
+
+.gap-20 {
+  gap: 20px !important;
+}
+
+.gap-10 {
+  gap: 10px !important;
+}
+
+.gap-05 {
+  gap: 5px !important;
+}
+
+.w-80 {
+  width: 80%;
 }
