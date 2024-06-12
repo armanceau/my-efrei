@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export const AjouterEleve = ({liste, setGetListe}) => {
 
-    const [temp, setTemp] = useState({nom:"", prenom:"",age:"" })
+    const [temp, setTemp] = useState({nom:"", prenom:"",age:"", image:"", matiere:"", note:""  })
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -17,6 +17,8 @@ export const AjouterEleve = ({liste, setGetListe}) => {
     return(
         <div>
             <form name="addEleve" onSubmit={onSubmit} enctype="multipart/form-data">
+
+                <p>Info</p>
                 <label htmlFor="nom">
                     Nom
                 </label>
@@ -31,6 +33,22 @@ export const AjouterEleve = ({liste, setGetListe}) => {
                     Age
                 </label>
                 <input type="number" name="age" onChange={onChange}/>
+
+                <label htmlFor="image">
+                    Photo
+                </label>
+                <input type="file" name="image" onChange={onChange}/>
+
+                <p>notes</p>
+                <label htmlFor="matiere">
+                    Matiere
+                </label>
+                <input type="text" name="matiere" onChange={onChange}/>
+
+                <label htmlFor="note">
+                    Note
+                </label>
+                <input type="number" step="0.1" name="note" onChange={onChange}/>
 
                 <button type="submit">Ajouter élève</button>
             </form>
