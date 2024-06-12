@@ -12,7 +12,6 @@ function App() {
                 return(
                     <div>
                         <ListeCLasse classes={classes}/>
-                        <ListeEleves classes={classes[index].eleves}/>
                     </div>
                 )
             })}
