@@ -10,13 +10,13 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
     //console.log(document.getElementById("test"))
     return(
         
-        <div class="eleve">
-            <img src={image} alt={nom + " " + prenom} class="img-profil" />
+        <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
+            <img src={image} alt={nom + " " + prenom} class="img-profil br-top-20" />
             <div class="info">
                 <p>{nom} {prenom}</p>
             </div>
 
-            <Popup 
+            <Popup
                 trigger={
                 <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
                     <i class="bi bi-search"></i> 
@@ -24,10 +24,12 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                 </button>} 
                 modal nested>    
                 {close => (      
-                    <div className="popup">        
-                        <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
-                            <i class="bi bi-x"></i>
-                        </button>        
+                    <div className="popup"> 
+                        <div class="w-100 d-flex justify-content-end">
+                            <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
+                                <i class="bi bi-x"></i>
+                            </button>        
+                        </div>        
                         <div className="header"> 
                             <h2>
                                 {nom} {prenom} 

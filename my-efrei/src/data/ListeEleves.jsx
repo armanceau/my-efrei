@@ -23,14 +23,13 @@ export const ListeEleves = () => {
             Liste élève :
             <br />
             <br />
-            {getListe.map((value, index) => {  
-                return(
-                    <div className="container-eleve">
+            <div className="d-flex gap-20">
+                {getListe.map((value, index) => {  
+                    return(
                         <FicheEleve key={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
-                    </div>
-                )
-            })}
-            
+                    )
+                })}
+            </div>
             <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
             <hr />
         </div>
