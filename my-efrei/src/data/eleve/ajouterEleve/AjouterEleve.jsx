@@ -4,17 +4,20 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const AjouterEleve = ({liste, setGetListe}) => {
 
-    const [temp, setTemp] = useState({nom:"", prenom:"",age:"" })
+    const [temp, setTemp] = useState({nom:"", prenom:"",age:"", image:"", matiere:"", note:""  })
 
     const onSubmit = (e) => {
-        e.preventDefault()
-        setGetListe([...liste, temp])
-    }
+        e.preventDefault();
+        setGetListe([...liste, temp]);
+        setTemp({ nom: "", prenom: "", age: "", image: "", matiere: "", note: "" });
+    };
+
 
     const onChange = (e) => {
         temp[e.target.name] = e.target.value
         setTemp(temp)
     }
+
 
     return(
         <div>
@@ -33,6 +36,11 @@ export const AjouterEleve = ({liste, setGetListe}) => {
                     Age
                 </label>
                 <input type="number" name="age" onChange={onChange}/>
+
+                <label htmlFor="image">
+                    Photo
+                </label>
+                <input type="file" name="image" onChange={onChange}/>
 
                 <button type="submit">Ajouter élève</button>
             </form>
