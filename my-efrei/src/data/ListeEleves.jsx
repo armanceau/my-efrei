@@ -24,7 +24,7 @@ export const ListeEleves = () => {
             {getListe.map((value, index) => {  
                 return(
                     <div className="container-eleve">
-                        <FicheEleve key={index} nom={value.nom} prenom={value.prenom} image={value.image}/>
+                        <FicheEleve key={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
                     </div>
                 )
             })}
