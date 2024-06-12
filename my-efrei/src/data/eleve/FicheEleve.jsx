@@ -51,9 +51,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                             <br />
                             Age : {age}
                             <br />
-                            <i>
-                                fgezuyfez
-                            </i>
                         </div>        
                     </div>    
                 )}  
