@@ -8,7 +8,7 @@ export const ListeCLasse = ({classes}) => {
             {classes.map((value, index) => {
                 return(
                     <div>
-                        Classe : 
+                        Classe 1 : 
                         <FicheClasse key={index} nom={value.nom} image={value.image} index={index}/>
                     </div>
                 )
