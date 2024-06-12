@@ -85,6 +85,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Bissor",
                 "prenom": "Melvin",
+                "image": "./asset/img/enseignants/Durand.jpg",
                 "matiere": "React.js",
                 "classes": [
                     1, 2, 3
@@ -94,6 +95,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Jack",
                 "prenom": "Jean",
+                "image": "./asset/img/enseignants/Jean.jpg",
                 "matiere": "Anglais",
                 "classes": [
                     1, 2
@@ -188,8 +190,9 @@ export let classes = [
         "enseignants": [
             {
                 "id": 1,
-                "nom": "Bissor",
-                "prenom": "Melvin",
+                "nom": "Poipoi",
+                "prenom": "lutin",
+                "image": "./asset/img/enseignants/Jean.jpg",
                 "matiere": "React.js",
                 "classes": [
                     1, 2, 3
@@ -197,8 +200,9 @@ export let classes = [
             },
             {
                 "id": 2,
-                "nom": "Jack",
-                "prenom": "Jean",
+                "nom": "Pierre",
+                "prenom": "Rocher",
+                "image": "./asset/img/enseignants/Sophie.jpg",
                 "matiere": "Anglais",
                 "classes": [
                     1, 2
