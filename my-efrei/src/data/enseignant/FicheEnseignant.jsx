@@ -39,10 +39,6 @@ export const FicheEnseignant = ({nom, prenom, image, matiere, classes, age}) => 
                             Age : {age}
                             <br />
                             Matière : {matiere}
-                            <br />
-                            <i>
-                                fgezuyfez
-                            </i>
                         </div>        
                     </div>    
                 )}  

@@ -86,6 +86,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Bissor",
                 "prenom": "Melvin",
+                "age": 25,
                 "image": "/asset/img/enseignants/Durand.jpg",
                 "matiere": "React.js",
                 "classes": [
@@ -96,6 +97,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Jack",
                 "prenom": "Jean",
+                "age": 62,
                 "image": "/asset/img/enseignants/Jean.jpg",
                 "matiere": "Anglais",
                 "classes": [
@@ -194,6 +196,7 @@ export let classes = [
                 "id": 1,
                 "nom": "Poipoi",
                 "prenom": "lutin",
+                "age": 45,
                 "image": "/asset/img/enseignants/Jean.jpg",
                 "matiere": "React.js",
                 "classes": [
@@ -204,6 +207,7 @@ export let classes = [
                 "id": 2,
                 "nom": "Pierre",
                 "prenom": "Rocher",
+                "age": 35,
                 "image": "/asset/img/enseignants/Sophie.jpg",
                 "matiere": "Anglais",
                 "classes": [

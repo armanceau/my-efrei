@@ -8,7 +8,7 @@ import { AjouterNote } from "./ajouterNote/AjouterNote"
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
 
-    const [getNote, setGetNote] = useState(notes);
+    const [getNote, setGetNote] = useState(notes || []);
 
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">

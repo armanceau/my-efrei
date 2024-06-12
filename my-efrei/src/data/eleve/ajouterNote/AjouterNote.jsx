@@ -11,6 +11,7 @@ export const AjouterNote = ({ liste, setGetNote }) => {
         setTemp({ matiere: "", note: "" });
     };
 
+    //savoir expliquer
     const onChange = (e) => {
         const { name, value } = e.target;
         setTemp(prevState => ({
