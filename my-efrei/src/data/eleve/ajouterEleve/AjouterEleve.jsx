@@ -21,9 +21,7 @@ export const AjouterEleve = ({liste, setGetListe}) => {
 
     return(
         <div>
-            <form name="addEleve" onSubmit={onSubmit} enctype="multipart/form-data">
-
-                <p>Info</p>
+            <form name="addEleve" onSubmit={onSubmit} enctype="multipart/form-data" class="form-group">
                 <label htmlFor="nom">
                     Nom
                 </label>

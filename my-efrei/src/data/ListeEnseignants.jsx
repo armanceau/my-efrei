@@ -13,14 +13,13 @@ export const ListeEnseignants = () => {
     return (
         <div>
             Liste enseignant :
-            {classes[id].enseignants.map((value, index) => {  
-                return(
-                    <div className="container-enseignant">
+            <div className="d-flex gap-20">
+                {classes[id].enseignants.map((value, index) => {  
+                    return(
                         <FicheEnseignant key={index} nom={value.nom} prenom={value.prenom} matiere={value.matiere} image={value.image} age={value.age}/>
-                    </div>
-                )
-            })}
-            <hr />
+                    )
+                })}
+            </div>
         </div>
     )
 }

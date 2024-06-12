@@ -6,8 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const FicheEnseignant = ({nom, prenom, image, matiere, classes, age}) => {
     return(
-        <div class="enseignant">
-            <img src={image} alt={nom + " " + prenom} class="img-profil" />
+        <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
+            <img src={image} alt={nom + " " + prenom} class="img-profil br-top-20" />
             <div class="info">
                 <p>{nom} {prenom}</p>
                 <p>{classes}</p>
@@ -22,9 +22,11 @@ export const FicheEnseignant = ({nom, prenom, image, matiere, classes, age}) => 
                 modal nested>    
                 {close => (      
                     <div className="popup">        
-                        <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
-                            <i class="bi bi-x"></i>
-                        </button>        
+                        <div class="w-100 d-flex justify-content-end">
+                            <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
+                                <i class="bi bi-x"></i>
+                            </button>        
+                        </div>       
                         <div className="header"> 
                             <h2>
                                 {nom} {prenom} 
