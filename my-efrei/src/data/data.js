@@ -88,7 +88,11 @@ export let classes = [
                 "prenom": "Melvin",
                 "age": 25,
                 "image": "/asset/img/enseignants/Durand.jpg",
-                "matiere": "React.js",
+                "matieres": [
+                    {
+                        "matiere": "React.js",
+                    }
+                ],
                 "classes": [
                     1, 2, 3
                 ]
@@ -99,7 +103,11 @@ export let classes = [
                 "prenom": "Jean",
                 "age": 62,
                 "image": "/asset/img/enseignants/Jean.jpg",
-                "matiere": "Anglais",
+                "matieres": [
+                    {
+                        "matiere": "Anglais",
+                    }
+                ],
                 "classes": [
                     1, 2
                 ]
@@ -198,7 +206,11 @@ export let classes = [
                 "prenom": "lutin",
                 "age": 45,
                 "image": "/asset/img/enseignants/Jean.jpg",
-                "matiere": "React.js",
+                "matieres": [
+                    {
+                        "matiere": "Java",
+                    }
+                ],
                 "classes": [
                     1, 2, 3
                 ]
@@ -209,7 +221,11 @@ export let classes = [
                 "prenom": "Rocher",
                 "age": 35,
                 "image": "/asset/img/enseignants/Sophie.jpg",
-                "matiere": "Anglais",
+                "matieres": [
+                    {
+                        "matiere": "PHP",
+                    }
+                ],
                 "classes": [
                     1, 2
                 ]

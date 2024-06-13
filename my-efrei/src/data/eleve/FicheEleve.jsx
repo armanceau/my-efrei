@@ -64,16 +64,16 @@ export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
                             <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
                                 <i className="bi bi-x"></i>
                             </button>        
-                            <div>
-                                <button onClick={() => removeEleve(index + "_" + getNom)}>X</button>
-                            </div>
                         </div>        
-                        <div className="header"> 
-                            <h2>
+                        <div className="header d-flex gap-2 align-items-center"> 
+                            <h2 className="mb-0">
                                 {getNom} {getPrenom} 
                             </h2>
-                            <p>Age : {getAge}</p>
+                            <div>
+                                <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={() => removeEleve(index + "_" + getNom)}><i className="bi bi-trash"></i></button>
+                            </div>
                         </div>        
+                            <p>Age : {getAge}</p>
                         <div className="content">          
                             {' '}          
                             <p>
@@ -81,9 +81,9 @@ export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
                                 {getNote && getNote.length > 0 ? (
                                     <ul>
                                         {getNote.map((note, index) => (
-                                            <li className="d-flex" id={index + "_" + note.matiere} key={index}>{note.matiere}: {note.note}
+                                            <li className="d-flex gap-2 align-items-center mt-2" id={index + "_" + note.matiere} key={index}>{note.matiere}: {note.note}
                                                 <div>
-                                                    <button onClick={() => removeNote(index + "_" + note.matiere)}>X</button>
+                                                    <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={() => removeNote(index + "_" + note.matiere)}><i className="bi bi-trash"></i></button>
                                                 </div>
                                             </li>
                                         ))}

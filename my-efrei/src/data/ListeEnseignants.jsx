@@ -56,7 +56,7 @@ export const ListeEnseignants = () => {
             <div className="d-flex gap-20">
                 {getListe.map((value, index) => {  
                     return(
-                        <FicheEnseignant key={index} index={index} nom={value.nom} prenom={value.prenom} matiere={value.matiere} image={value.image} age={value.age}/>
+                        <FicheEnseignant key={index} index={index} nom={value.nom} prenom={value.prenom} matieres={value.matieres} image={value.image} age={value.age}/>
                     )
                 })}
             </div>           

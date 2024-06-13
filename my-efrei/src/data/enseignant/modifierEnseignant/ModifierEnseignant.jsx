@@ -2,13 +2,12 @@ import { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setImage, age, setAge, matiere, setMatiere }) => {
+export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setImage, age, setAge }) => {
         
     const [tempNom, setTempNom] = useState(nom);
     const [tempPrenom, setTempPrenom] = useState(prenom);
     const [tempImage, setTempImage] = useState(image);
     const [tempAge, setTempAge] = useState(age);
-    const [tempMatiere, setTempMatiere] = useState(matiere);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -16,7 +15,6 @@ export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setI
         setPrenom(tempPrenom);
         setImage(tempImage);
         setAge(tempAge);
-        setMatiere(tempMatiere);
     };
 
     const onChange = (e) => {
@@ -33,9 +31,6 @@ export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setI
                 break;
             case 'age':
                 setTempAge(value);
-                break;
-            case 'matiere':
-                setTempMatiere(value);
                 break;
             default:
                 break;
@@ -75,10 +70,6 @@ export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setI
                 <br />
 
                 <div className="d-flex w-100 gap-20">
-                    <div className="d-flex align-items-start flex-column w-50">
-                        <label htmlFor="matiere">Matière :</label>
-                        <input type="text" name="matiere" className="form-control" onChange={onChange} />
-                    </div>
 
                     <div className="d-flex align-items-start flex-column w-50">
                        
