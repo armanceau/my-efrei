@@ -69,7 +69,7 @@ export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
                         <div className="content">          
                             {' '}          
                             <p>
-                                notes :
+                                Notes :
                                 {getNote && getNote.length > 0 ? (
                                     <ul>
                                         {getNote.map((note, index) => (

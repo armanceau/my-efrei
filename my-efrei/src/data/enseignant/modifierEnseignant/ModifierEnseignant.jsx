@@ -45,33 +45,54 @@ export const ModifierEnseignant = ({ nom, setNom, prenom, setPrenom, image, setI
 
     return(
         <div>
-            <form name="addEleve" onSubmit={onSubmit} enctype="multipart/form-data" class="form-group">
-                <label htmlFor="nom">
-                    Nom
-                </label>
-                <input type="text" name="nom" onChange={onChange}/>
+            <form name="editEnseignant" onSubmit={onSubmit} enctype="multipart/form-data" class="form-group">
+                <div class="d-flex w-100 gap-20">
+                    <div class="d-flex align-items-start flex-column w-50">
+                        <label htmlFor="nom">Nom :</label>
+                        <input type="text" name="nom" class="form-control" onChange={onChange} />
+                    </div>
 
-                <label htmlFor="prenom">
-                    Prénom
-                </label>
-                <input type="text" name="prenom" onChange={onChange}/>
+                    <div class="d-flex align-items-start flex-column w-50">
+                        <label htmlFor="prenom">Prénom :</label>
+                        <input type="text" name="prenom" class="form-control" onChange={onChange} />
+                    </div>
+                </div>
 
-                <label htmlFor="age">
-                    Age
-                </label>
-                <input type="number" name="age" onChange={onChange}/>
-                
-                <label htmlFor="matiere">
-                    Matiere
-                </label>
-                <input type="text" name="matiere" onChange={onChange}/>
+                <br />
 
-                <label htmlFor="image">
-                    Photo
-                </label>
-                <input type="file" name="image" onChange={onChange}/>
+                <div class="d-flex w-100 gap-20">
+                    <div class="d-flex align-items-start flex-column w-50">
+                        <label htmlFor="age">Age :</label>
+                        <input type="number" name="age" class="form-control" onChange={onChange} />
+                    </div>
 
-                <button type="submit">Modifier élève</button>
+                    <div class="d-flex align-items-start flex-column w-50">
+                        <label htmlFor="image">Photo :</label>
+                        <input type="file" name="image" class="form-control" onChange={onChange} />
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="d-flex w-100 gap-20">
+                    <div class="d-flex align-items-start flex-column w-50">
+                        <label htmlFor="matiere">Matière :</label>
+                        <input type="text" name="matiere" class="form-control" onChange={onChange} />
+                    </div>
+
+                    <div class="d-flex align-items-start flex-column w-50">
+                       
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="w-100 d-flex justify-content-end">
+                    <button class="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20" type="submit">
+                        <i class="bi bi-pencil-square"></i>
+                        Modifier
+                    </button>
+                </div>
             </form>
         </div>
     )

@@ -6,6 +6,9 @@ import {classes} from './data'
 import { AjouterEleve } from "./eleve/ajouterEleve/AjouterEleve"
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { LinkButton } from './components/LinkButton'
 
 export const ListeEleves = () => {
 
@@ -14,13 +17,53 @@ export const ListeEleves = () => {
     const [getListe, setGetListe] = useState(classes[id].eleves)
 
     return (
-        <div>
-            Classe : {classes[id].nom}
+        <div class="p-border-4">
+            <div class="w-100 m-2">
+                <LinkButton text={"Retour"} path={"/"} icon={"bi bi-arrow-left-circle"}/>
+            </div>
+            <div class="w-100 d-flex justify-content-center align-items-center">
+                <h2>
+                    Classe : {classes[id].nom}
+                </h2>
+            </div>
+
+            <hr />
+
+            <div>
+                Liste des élèves :          
+            </div>
+
             <br />
+           
+            <Popup
+                trigger={
+                    <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
+                    <i class="bi bi-person-plus-fill"></i>
+                    Ajouter un élève 
+                </button>} 
+                modal nested>    
+                {close => (      
+                    <div className="popup"> 
+                        <div class="w-100 d-flex justify-content-end">
+                            <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
+                                <i class="bi bi-x"></i>
+                            </button>        
+                        </div>        
+                        <div className="header"> 
+                            <h2>
+                               Ajouter un élève
+                            </h2>                        
+                        </div>        
+                        <div className="content">          
+                            {' '}                                     
+                            <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
+                        </div>        
+                    </div>    
+                )}  
+			</Popup>
+
             <br />
-            Liste élève :
-            <br />
-            <br />
+
             <div className="d-flex gap-20">
                 {getListe.map((value, index) => { 
                     return(
@@ -29,8 +72,7 @@ export const ListeEleves = () => {
                     
                 })}
             </div>
-            <br />
-            <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
+
             <hr />
         </div>
     )
