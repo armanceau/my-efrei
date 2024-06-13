@@ -16,9 +16,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
     const [getAge, setGetAge] = useState(age);
     const [getNote, setGetNote] = useState(notes || []);
 
-    console.log(getNote);
-
-
     useEffect(() => {
         setGetNom(nom);
         setGetPrenom(prenom);
