@@ -22,10 +22,11 @@ export const ListeEleves = () => {
             <br />
             <br />
             <div className="d-flex gap-20">
-                {getListe.map((value, index) => {  
+                {getListe.map((value, index) => { 
                     return(
-                        <FicheEleve key={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
-                    )
+                        <FicheEleve index={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
+                        )
+                    
                 })}
             </div>
             <br />

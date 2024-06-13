@@ -1,5 +1,5 @@
 import "./FicheEleve.css";
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,23 +7,37 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { AjouterNote } from "./ajouterNote/AjouterNote"
 import { ModifierEleve } from "./modifierEleve/ModifierEleve"
 
-export const FicheEleve = ({nom, prenom, image, age, notes}) => {
 
+export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
+    
     const [getNom, setGetNom] = useState(nom);
     const [getPrenom, setGetPrenom] = useState(prenom);
     const [getImage, setGetImage] = useState(image);
     const [getAge, setGetAge] = useState(age);
     const [getNote, setGetNote] = useState(notes || []);
-
+    
     useEffect(() => {
         setGetNom(nom);
         setGetPrenom(prenom);
         setGetImage(image);
         setGetAge(age);
-    }, [nom, prenom, image, age]);
+        }, [nom, prenom, image, age]);
 
-    return(
-        <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
+    // suppression d'un eleve
+    const removeElement = () => {
+        setTimeout(() => {
+            const eleveElement = document.getElementById(index + "_" + getNom);
+            if (eleveElement) {
+                var eleveToDelete = eleveElement;
+                var idElementToDelete = eleveToDelete.getAttribute("id");
+                const elementToDelete = document.getElementById(idElementToDelete);
+                elementToDelete.remove();
+            }
+        }, 200);
+    };
+
+        return(
+        <div id={index + "_" +  getNom} class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
             <img src={image} alt={nom + " " + prenom} class="img-profil br-20" />
             <div class="info">
                 <p>{getNom} {getPrenom}</p>
@@ -34,7 +48,7 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                 <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
                     <i class="bi bi-search"></i> 
                     Détails 
-                </button>} 
+                </button>}
                 modal nested>    
                 {close => (      
                     <div className="popup"> 
@@ -42,6 +56,9 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                             <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
                                 <i class="bi bi-x"></i>
                             </button>        
+                            <div>
+                                <button onClick={removeElement}>X</button>
+                            </div>
                         </div>        
                         <div className="header"> 
                             <h2>
