@@ -94,3 +94,7 @@ body{
 .w-80 {
   width: 80%;
 }
+
+.p-border-4{
+  padding: 0 1.5rem  !important;
+}

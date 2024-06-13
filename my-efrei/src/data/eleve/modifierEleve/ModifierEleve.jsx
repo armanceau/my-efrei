@@ -40,7 +40,7 @@ export const ModifierEleve = ({ nom, setNom, prenom, setPrenom, image, setImage,
 
     return(
         <div>
-            <form name="addEleve" onSubmit={onSubmit} enctype="multipart/form-data" class="form-group">
+            <form name="editEleve" onSubmit={onSubmit} enctype="multipart/form-data" class="form-group">
                 <div class="d-flex w-100 gap-20">
                     <div class="d-flex align-items-start flex-column w-50">
                         <label htmlFor="nom">Nom :</label>

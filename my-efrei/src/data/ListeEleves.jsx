@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import { LinkButton } from './components/LinkButton'
 
 export const ListeEleves = () => {
 
@@ -16,12 +17,22 @@ export const ListeEleves = () => {
     const [getListe, setGetListe] = useState(classes[id].eleves)
 
     return (
-        <div>
-            Classe : {classes[id].nom}
-            <br />
-            <br />
-            Liste des élèves :
-            <br />
+        <div class="p-border-4">
+            <div class="w-100 m-2">
+                <LinkButton text={"Retour"} path={"/"} icon={"bi bi-arrow-left-circle"}/>
+            </div>
+            <div class="w-100 d-flex justify-content-center align-items-center">
+                <h2>
+                    Classe : {classes[id].nom}
+                </h2>
+            </div>
+
+            <hr />
+
+            <div>
+                Liste des élèves :          
+            </div>
+
             <br />
            
             <Popup
@@ -44,9 +55,8 @@ export const ListeEleves = () => {
                             </h2>                        
                         </div>        
                         <div className="content">          
-                            {' '}          
-                            
-                                <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
+                            {' '}                                     
+                            <AjouterEleve liste={getListe} setGetListe={setGetListe}/>
                         </div>        
                     </div>    
                 )}  

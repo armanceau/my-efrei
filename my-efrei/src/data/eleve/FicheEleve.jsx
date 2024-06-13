@@ -15,9 +15,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
     const [getAge, setGetAge] = useState(age);
     const [getNote, setGetNote] = useState(notes || []);
 
-    console.log(getNote);
-
-
     useEffect(() => {
         setGetNom(nom);
         setGetPrenom(prenom);
@@ -25,7 +22,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
         setGetAge(age);
     }, [nom, prenom, image, age]);
     
-
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
             <img src={image} alt={nom + " " + prenom} class="img-profil br-20" />
@@ -56,7 +52,7 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                         <div className="content">          
                             {' '}          
                             <p>
-                                notes :
+                                Notes :
                                 {getNote && getNote.length > 0 ? (
                                     <ul>
                                         {getNote.map((note, index) => (
