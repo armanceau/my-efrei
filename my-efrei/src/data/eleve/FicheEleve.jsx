@@ -5,7 +5,6 @@ import 'reactjs-popup/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { AjouterNote } from "./ajouterNote/AjouterNote"
-import { ModifierNote } from "./modifierNote/ModifierNote"
 import { ModifierEleve } from "./modifierEleve/ModifierEleve"
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
@@ -22,7 +21,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
         setGetImage(image);
         setGetAge(age);
     }, [nom, prenom, image, age]);
-    
 
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
@@ -70,9 +68,6 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                             <hr />
                             <h5>Ajouter une note :</h5>
                             <AjouterNote liste={getNote} setGetNote={setGetNote} />
-                            <br />
-                            <h5>Modifier une note :</h5>
-                            <ModifierNote liste={getNote} setGetNote={setGetNote} />
                             <hr />
                             <h5>Modifier l'élève :</h5>
                             <ModifierEleve 
