@@ -1,15 +1,37 @@
 import "./FicheEleve.css";
+import { useEffect, useState } from 'react'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { AjouterNote } from "./ajouterNote/AjouterNote"
+import { ModifierNote } from "./modifierNote/ModifierNote"
+import { ModifierEleve } from "./modifierEleve/ModifierEleve"
 
 export const FicheEleve = ({nom, prenom, image, age, notes}) => {
+
+    const [getNom, setGetNom] = useState(nom);
+    const [getPrenom, setGetPrenom] = useState(prenom);
+    const [getImage, setGetImage] = useState(image);
+    const [getAge, setGetAge] = useState(age);
+    const [getNote, setGetNote] = useState(notes || []);
+
+    console.log(getNote);
+
+
+    useEffect(() => {
+        setGetNom(nom);
+        setGetPrenom(prenom);
+        setGetImage(image);
+        setGetAge(age);
+    }, [nom, prenom, image, age]);
+    
+
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
             <img src={image} alt={nom + " " + prenom} class="img-profil br-20" />
             <div class="info">
-                <p>{nom} {prenom}</p>
+                <p>{getNom} {getPrenom}</p>
             </div>
 
             <Popup
@@ -28,25 +50,43 @@ export const FicheEleve = ({nom, prenom, image, age, notes}) => {
                         </div>        
                         <div className="header"> 
                             <h2>
-                                {nom} {prenom} 
+                                {getNom} {getPrenom} 
                             </h2>
+                            <p>Age : {getAge}</p>
                         </div>        
                         <div className="content">          
                             {' '}          
                             <p>
-                                {notes && notes.length > 0 ? (
+                                notes :
+                                {getNote && getNote.length > 0 ? (
                                     <ul>
-                                        {notes.map((note, index) => (
+                                        {getNote.map((note, index) => (
                                             <li key={index}>{note.matiere}: {note.note}</li>
-                                        ))}
+                                            ))}
                                     </ul>
                                 ) : (
                                     <i>
-                                        <span class="text-muted">Pas de notes disponibles.</span>
+                                        <span className="text-muted">Pas de notes disponibles.</span>
                                     </i>
                                 )}
                             </p>
-                            Age : {age}
+                            <hr />
+                            <h5>Ajouter une note :</h5>
+                            <AjouterNote liste={getNote} setGetNote={setGetNote} />
+                            <br />
+                            <h5>Modifier une note :</h5>
+                            <ModifierNote liste={getNote} setGetNote={setGetNote} />
+                            <hr />
+                            <h5>Modifier l'élève :</h5>
+                            <ModifierEleve 
+                                nom={getNom}
+                                setNom={setGetNom}
+                                prenom={getPrenom}
+                                setPrenom={setGetPrenom}
+                                image={getImage}
+                                setImage={setGetImage}
+                                age={getAge}
+                                setAge={setGetAge} />
                         </div>        
                     </div>    
                 )}  

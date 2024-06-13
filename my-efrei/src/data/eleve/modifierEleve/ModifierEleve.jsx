@@ -2,21 +2,40 @@ import { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-export const AjouterEleve = ({liste, setGetListe}) => {
-
-    const [temp, setTemp] = useState({nom:"", prenom:"",age:"", image:""  })
+export const ModifierEleve = ({ nom, setNom, prenom, setPrenom, image, setImage, age, setAge }) => {
+        
+    const [tempNom, setTempNom] = useState(nom);
+    const [tempPrenom, setTempPrenom] = useState(prenom);
+    const [tempImage, setTempImage] = useState(image);
+    const [tempAge, setTempAge] = useState(age);
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setGetListe([...liste, temp]);
-        setTemp({ nom: "", prenom: "", age: "", image: "" });
+        setNom(tempNom);
+        setPrenom(tempPrenom);
+        setImage(tempImage);
+        setAge(tempAge);
     };
 
-
     const onChange = (e) => {
-        temp[e.target.name] = e.target.value
-        setTemp(temp)
-    }
+        const { name, value } = e.target;
+        switch (name) {
+            case 'nom':
+                setTempNom(value);
+                break;
+            case 'prenom':
+                setTempPrenom(value);
+                break;
+            case 'image':
+                setTempImage(value);
+                break;
+            case 'age':
+                setTempAge(value);
+                break;
+            default:
+                break;
+        }
+    };
 
 
     return(
@@ -42,7 +61,7 @@ export const AjouterEleve = ({liste, setGetListe}) => {
                 </label>
                 <input type="file" name="image" onChange={onChange}/>
 
-                <button type="submit">Ajouter élève</button>
+                <button type="submit">Modifier élève</button>
             </form>
         </div>
     )
