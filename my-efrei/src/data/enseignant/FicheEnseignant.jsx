@@ -24,7 +24,7 @@ export const FicheEnseignant = ({nom, prenom, image, matiere, classes, age}) => 
 
     return(
         <div class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
-            <img src={getImage} alt={getNom + " " + getPrenom} class="img-profil br-top-20" />
+            <img src={image} alt={nom + " " + prenom} class="img-profil br-20" />
             <div class="info">
                 <p>{getNom} {getPrenom}</p>
                 <p>{classes}</p>
