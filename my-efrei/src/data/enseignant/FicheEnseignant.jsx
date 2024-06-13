@@ -25,14 +25,21 @@ export const FicheEnseignant = ({index, nom, prenom, image, matieres, classes, a
         setGetAge(age);
     }, [nom, prenom, image, age]);
 
-    const removeElement = () => {
+    const removeEnseignant = (id) => {
         setTimeout(() => {
-            const enseignantElement = document.getElementById(index + "_" + getNom);
-            if (enseignantElement) {
-                var enseignantToDelete = enseignantElement;
-                var idElementToDelete = enseignantToDelete.getAttribute("id");
-                const elementToDelete = document.getElementById(idElementToDelete);
-                elementToDelete.remove();
+            const eleveElement = document.getElementById(id);
+            if (eleveElement) {
+                eleveElement.remove();
+            }
+        }, 200);
+    };
+
+    // suppression d'une note
+    const removeMatiere = (id) => {
+        setTimeout(() => {
+            const noteElement = document.getElementById(id);
+            if (noteElement) {
+                noteElement.remove();
             }
         }, 200);
     };
@@ -64,7 +71,7 @@ export const FicheEnseignant = ({index, nom, prenom, image, matieres, classes, a
                                 {getNom} {getPrenom} 
                             </h2>
                             <div>
-                                <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={removeElement}><i className="bi bi-trash"></i></button>
+                                <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={() => removeEnseignant(index + "_" + getNom)}><i className="bi bi-trash"></i></button>
                             </div>
                         </div>        
                         <div className="content">          
@@ -78,7 +85,7 @@ export const FicheEnseignant = ({index, nom, prenom, image, matieres, classes, a
                                         {getMatiere.map((matiere, index) => (
                                             <li className="d-flex gap-2 align-items-center mt-2" id={index + "_" + matiere.matiere} key={index}>Matière: {matiere.matiere}
                                                 <div>
-                                                    {/* <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={() => removeNote(index + "_" + note.matiere)}><i className="bi bi-trash"></i></button> */}
+                                                    <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={() => removeMatiere(index + "_" + matiere.matiere)}><i className="bi bi-trash"></i></button>
                                                 </div>
                                             </li>
                                         ))}
