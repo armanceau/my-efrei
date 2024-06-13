@@ -67,6 +67,10 @@ body{
   font-family: 'Poppins' !important;
 }
 
+.img-profil{
+  max-width: 150px;
+}
+
 .popup > .header{
   margin-top: -30px;
 }
@@ -97,4 +101,12 @@ body{
 
 .p-border-4{
   padding: 0 1.5rem  !important;
+}
+
+.custom-card{
+  transition: .5s;
+}
+
+.custom-card:hover{
+  scale: 1.05;
 }
