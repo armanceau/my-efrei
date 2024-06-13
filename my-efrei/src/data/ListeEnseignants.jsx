@@ -17,7 +17,7 @@ export const ListeEnseignants = () => {
     const [getListe, setGetListe] = useState(classes[id].enseignants)
 
     return (
-        <div class="p-border-4">
+        <div className="p-border-4">
             <div>
                 Liste des enseignants :          
             </div>
@@ -27,15 +27,15 @@ export const ListeEnseignants = () => {
             <Popup
                 trigger={
                     <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
-                    <i class="bi bi-person-plus-fill"></i>
+                    <i className="bi bi-person-plus-fill"></i>
                     Ajouter un enseignant 
                 </button>} 
                 modal nested>    
                 {close => (      
                     <div className="popup"> 
-                        <div class="w-100 d-flex justify-content-end">
+                        <div className="w-100 d-flex justify-content-end">
                             <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
-                                <i class="bi bi-x"></i>
+                                <i className="bi bi-x"></i>
                             </button>        
                         </div>        
                         <div className="header"> 
@@ -56,7 +56,7 @@ export const ListeEnseignants = () => {
             <div className="d-flex gap-20">
                 {getListe.map((value, index) => {  
                     return(
-                        <FicheEnseignant key={index} nom={value.nom} prenom={value.prenom} matiere={value.matiere} image={value.image} age={value.age}/>
+                        <FicheEnseignant key={index} index={index} nom={value.nom} prenom={value.prenom} matiere={value.matiere} image={value.image} age={value.age}/>
                     )
                 })}
             </div>           

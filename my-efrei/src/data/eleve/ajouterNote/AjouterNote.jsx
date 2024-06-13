@@ -23,23 +23,23 @@ export const AjouterNote = ({ liste, setGetNote }) => {
     return (
         <div>
             <form name="addNote" onSubmit={onSubmit} enctype="multipart/form-data" className="form-group">
-                <div class="d-flex w-100 gap-20">
-                    <div class="d-flex align-items-start flex-column w-50">
+                <div className="d-flex w-100 gap-20">
+                    <div className="d-flex align-items-start flex-column w-50">
                         <label htmlFor="matiere">Matière :</label>
-                        <input type="text" name="matiere" class="form-control" onChange={onChange} />
+                        <input type="text" name="matiere" className="form-control" onChange={onChange} />
                     </div>
 
-                    <div class="d-flex align-items-start flex-column w-50">
+                    <div className="d-flex align-items-start flex-column w-50">
                         <label htmlFor="note">Note :</label>
-                        <input type="number" step="0.25" name="note" class="form-control" onChange={onChange} />
+                        <input type="number" step="0.25" name="note" className="form-control" onChange={onChange} />
                     </div>
                 </div>
 
                 <br />
 
-                <div class="w-100 d-flex justify-content-end">
-                    <button class="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20" type="submit">
-                        <i class="bi bi-plus-circle-dotted"></i>
+                <div className="w-100 d-flex justify-content-end">
+                    <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20" type="submit">
+                        <i className="bi bi-plus-circle-dotted"></i>
                         Ajouter
                     </button>
                 </div>

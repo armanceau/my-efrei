@@ -24,40 +24,48 @@ export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
         }, [nom, prenom, image, age]);
 
     // suppression d'un eleve
-    const removeElement = () => {
+    const removeEleve = (id) => {
         setTimeout(() => {
-            const eleveElement = document.getElementById(index + "_" + getNom);
+            const eleveElement = document.getElementById(id);
             if (eleveElement) {
-                var eleveToDelete = eleveElement;
-                var idElementToDelete = eleveToDelete.getAttribute("id");
-                const elementToDelete = document.getElementById(idElementToDelete);
-                elementToDelete.remove();
+                eleveElement.remove();
             }
         }, 200);
     };
+    
+    // suppression d'une note
+    const removeNote = (id) => {
+        setTimeout(() => {
+            const noteElement = document.getElementById(id);
+            if (noteElement) {
+                noteElement.remove();
+            }
+        }, 200);
+    };
+    
 
         return(
-        <div id={index + "_" +  getNom} class="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
-            <img src={image} alt={nom + " " + prenom} class="img-profil br-20" />
-            <div class="info">
+        <div id={index + "_" +  getNom} className="border shadow-sm br-20 d-flex align-items-center flex-column p-1">
+            <img src={image} alt={nom + " " + prenom} className="img-profil br-20" />
+            <div className="info">
                 <p>{getNom} {getPrenom}</p>
             </div>
 
             <Popup
                 trigger={
                 <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
-                    <i class="bi bi-search"></i> 
+                    <i className="bi bi-search"></i> 
                     Détails 
                 </button>}
                 modal nested>    
                 {close => (      
                     <div className="popup"> 
-                        <div class="w-100 d-flex justify-content-end">
+                        <div className="w-100 d-flex justify-content-end">
                             <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
-                                <i class="bi bi-x"></i>
+                                <i className="bi bi-x"></i>
                             </button>        
                             <div>
-                                <button onClick={removeElement}>X</button>
+                                <button onClick={() => removeEleve(index + "_" + getNom)}>X</button>
                             </div>
                         </div>        
                         <div className="header"> 
@@ -73,8 +81,12 @@ export const FicheEleve = ({index, nom, prenom, image, age, notes}) => {
                                 {getNote && getNote.length > 0 ? (
                                     <ul>
                                         {getNote.map((note, index) => (
-                                            <li key={index}>{note.matiere}: {note.note}</li>
-                                            ))}
+                                            <li className="d-flex" id={index + "_" + note.matiere} key={index}>{note.matiere}: {note.note}
+                                                <div>
+                                                    <button onClick={() => removeNote(index + "_" + note.matiere)}>X</button>
+                                                </div>
+                                            </li>
+                                        ))}
                                     </ul>
                                 ) : (
                                     <i>

@@ -5,8 +5,8 @@ import {classes} from '../data';
 export const FicheClasse = ({nom, image, index}) => {
     return(
         <div>
-            <a href={`classe/${index}`} test={index} class="border shadow-sm br-20 d-flex align-items-center flex-column p-1 custom-card">
-                <img src={image} alt={classes[index].nom} class="img-profil br-20" />
+            <a href={`classe/${index}`} test={index} className="border shadow-sm br-20 d-flex align-items-center flex-column p-1 custom-card">
+                <img src={image} alt={classes[index].nom} className="img-profil br-20" />
                 {classes[index].nom}
             </a>
             {/* <ListeEleves classes={classes[index].eleves}/>

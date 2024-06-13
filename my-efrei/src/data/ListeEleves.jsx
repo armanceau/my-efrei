@@ -17,11 +17,11 @@ export const ListeEleves = () => {
     const [getListe, setGetListe] = useState(classes[id].eleves)
 
     return (
-        <div class="p-border-4">
-            <div class="w-100 m-2">
+        <div className="p-border-4">
+            <div className="w-100 m-2">
                 <LinkButton text={"Retour"} path={"/"} icon={"bi bi-arrow-left-circle"}/>
             </div>
-            <div class="w-100 d-flex justify-content-center align-items-center">
+            <div className="w-100 d-flex justify-content-center align-items-center">
                 <h2>
                     Classe : {classes[id].nom}
                 </h2>
@@ -38,15 +38,15 @@ export const ListeEleves = () => {
             <Popup
                 trigger={
                     <button className="btn btn-sm btn-primary d-flex align-items-center justify-content-center gap-05 br-20"> 
-                    <i class="bi bi-person-plus-fill"></i>
+                    <i className="bi bi-person-plus-fill"></i>
                     Ajouter un élève 
                 </button>} 
                 modal nested>    
                 {close => (      
                     <div className="popup"> 
-                        <div class="w-100 d-flex justify-content-end">
+                        <div className="w-100 d-flex justify-content-end">
                             <button className="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" onClick={close}>          
-                                <i class="bi bi-x"></i>
+                                <i className="bi bi-x"></i>
                             </button>        
                         </div>        
                         <div className="header"> 
@@ -67,7 +67,7 @@ export const ListeEleves = () => {
             <div className="d-flex gap-20">
                 {getListe.map((value, index) => { 
                     return(
-                        <FicheEleve index={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
+                        <FicheEleve key={index} index={index} nom={value.nom} notes={value.notes} prenom={value.prenom} age={value.age} image={value.image}/>                      
                         )
                     
                 })}
