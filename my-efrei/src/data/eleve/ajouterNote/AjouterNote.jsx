@@ -13,12 +13,9 @@ export const AjouterNote = ({ liste, setGetNote }) => {
 
     //savoir expliquer
     const onChange = (e) => {
-        const { name, value } = e.target;
-        setTemp(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+        temp[e.target.name] = e.target.value
+        setTemp(temp)
+    }
 
     return (
         <div>
