@@ -11,7 +11,6 @@ export const AjouterMatiere = ({ liste, setGetNote }) => {
         setTemp({ matiere: "" });
     };
 
-    //savoir expliquer
     const onChange = (e) => {
         temp[e.target.name] = e.target.value
         setTemp(temp)
